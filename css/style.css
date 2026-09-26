@@ -19,9 +19,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: white;
 }
 
 .nav-inner {
@@ -55,10 +53,35 @@ body {
 }
 
 .menu a {
+    position: relative;
     text-decoration: none;
     color: #374151;
     font-weight: 600;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.menu a:hover {
+    color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.menu a.active {
+    padding: 9px 14px;
+    border-radius: 999px;
+    color: #1d4ed8;
+    background: #eef4ff;
+    box-shadow: inset 0 0 0 1px rgba(29, 78, 216, 0.08), 0 5px 14px rgba(29, 78, 216, 0.1);
+}
+
+.menu a.active::after {
+    position: absolute;
+    right: 50%;
+    bottom: 3px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    content: "";
+    transform: translateX(50%);
 }
 
 .hero {
@@ -113,12 +136,22 @@ body {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     padding: 14px 24px;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 700;
     transition: 0.2s ease;
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
 .btn-primary {
@@ -130,13 +163,14 @@ body {
     background: #1e40af;
 }
 
-.btn-secondary {
-    background: #facc15;
-    color: #111827;
+.btn-whatsapp {
+    background: #25d366;
+    color: #ffffff;
+    box-shadow: 0 10px 22px rgba(37, 211, 102, 0.25);
 }
 
-.btn-secondary:hover {
-    background: #eab308;
+.btn-whatsapp:hover {
+    background: #1ebc5d;
 }
 
 .hero-stats {
@@ -162,121 +196,6 @@ body {
     font-size: 0.9rem;
 }
 
-.hero-visual {
-    display: flex;
-    justify-content: center;
-}
-
-.battery-card {
-    width: min(360px, 100%);
-    background: linear-gradient(180deg, #ffffff 0%, #dbeafe 100%);
-    border: 1px solid rgba(29, 78, 216, 0.08);
-    border-radius: 28px;
-    padding: 20px;
-    box-shadow: 0 26px 60px rgba(30, 64, 175, 0.12);
-}
-
-.battery-top {
-    width: 84px;
-    height: 18px;
-    background: #ef4444;
-    border-radius: 10px 10px 0 0;
-    margin: 0 auto 18px;
-}
-
-.battery-body {
-    background: #ffffff;
-    border-radius: 22px;
-    padding: 24px 22px;
-    box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
-}
-
-.battery-label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #1d4ed8;
-    margin-bottom: 10px;
-}
-
-.battery-body h3 {
-    font-size: 2rem;
-    color: #111827;
-    margin-bottom: 18px;
-}
-
-.battery-meter {
-    width: 100%;
-    height: 16px;
-    background: #e5e7eb;
-    border-radius: 999px;
-    overflow: hidden;
-    margin-bottom: 12px;
-}
-
-.battery-meter span {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #1d4ed8;
-    border-radius: inherit;
-}
-
-.battery-info {
-    display: flex;
-    justify-content: space-between;
-    color: #475569;
-    font-weight: 600;
-}
-
-.about {
-    padding: 80px 0;
-    background: #ffffff;
-}
-
-.about-inner {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    align-items: center;
-    gap: 50px;
-}
-
-.about-image {
-    display: flex;
-    justify-content: center;
-}
-
-.about-box {
-    width: min(420px, 100%);
-    height: 420px;
-    border-radius: 28px;
-    object-fit: cover;
-    display: block;
-    box-shadow: 0 24px 50px rgba(29, 78, 216, 0.18);
-}
-
-.about-content {
-    max-width: 560px;
-}
-
-.about-content h2 {
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    color: #111827;
-    line-height: 1.2;
-    margin-bottom: 18px;
-    text-align: justify;
-}
-
-.about-content p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #4b5563;
-    margin-bottom: 16px;
-    text-align: justify;
-}
-
 .products {
     padding: 50px 0;
     background: #ffffff;
@@ -299,7 +218,6 @@ body {
 }
 
 .product-card {
-    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
     border: 1px solid rgba(148, 163, 184, 0.18);
     border-radius: 22px;
     overflow: hidden;
@@ -307,15 +225,20 @@ body {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.product-card:hover {
-    box-shadow: 0 22px 38px rgba(15, 23, 42, 0.12);
-}
-
 .product-image-wrap {
     position: relative;
     height: 220px;
     overflow: hidden;
     background: #f3f4f6;
+}
+
+.product-image-wrap::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.28) 38%, rgba(0, 0, 0, 0) 76%);
+    content: '';
+    pointer-events: none;
 }
 
 .product-image {
@@ -330,21 +253,13 @@ body {
     transform: scale(1.04);
 }
 
-.product-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 18px;
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.76) 100%);
-}
-
 .product-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
     display: inline-block;
-    margin-bottom: 10px;
-    padding: 7px 11px;
+    padding: 7px 12px;
     border-radius: 999px;
     background: linear-gradient(135deg, #dbeafe, #bfdbfe);
     color: #1d4ed8;
@@ -354,27 +269,11 @@ body {
     text-transform: uppercase;
 }
 
-.product-overlay h3 {
-    margin: 0;
-    font-size: 1rem;
-    color: #ffffff;
-    line-height: 1.3;
-    text-shadow: 0 2px 12px rgba(15, 23, 42, 0.3);
-}
-
-.product-body {
-    padding: 18px 18px 22px;
-}
-
-.product-card p {
-    margin: 0;
-    color: #4b5563;
-    line-height: 1.7;
-}
-
 .product-action {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 16px;
     margin-top: 34px;
 }
 
