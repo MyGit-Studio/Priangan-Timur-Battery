@@ -7,7 +7,7 @@
     min-height: 320px;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(11, 18, 32, 0.74), rgba(11, 18, 32, 0.74)), url('../img/hero.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url('../img/hero.jpeg') center/cover no-repeat;
 }
 
 .merk-page-hero {

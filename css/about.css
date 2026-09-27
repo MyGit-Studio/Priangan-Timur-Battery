@@ -3,7 +3,7 @@
     min-height: 320px;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)), url('../img/hero.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url('../img/hero.jpeg') center/cover no-repeat;
 }
 
 .about-page-hero {
