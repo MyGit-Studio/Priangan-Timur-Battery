@@ -250,3 +250,41 @@
     padding: 100px 0 80px;
     background: #ffffff;
 }
+
+@media (max-width: 900px) {
+    .story-grid,
+    .about-scope-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .about-highlights,
+    .about-values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .story-image {
+        height: min(480px, 70vw);
+    }
+}
+
+@media (max-width: 560px) {
+    .story-section,
+    .about-scope-section {
+        padding: 60px 0;
+    }
+
+    .about-highlights,
+    .about-values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .about-cta-inner .btn {
+        width: 100%;
+    }
+}

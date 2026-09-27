@@ -15,13 +15,16 @@
     <header class="navbar">
         <div class="container nav-inner">
             <div class="logo"><a href="index.html">PRIANGAN TIMUR <span class="brand-red">BATTERY</span></a></div>
-            <nav class="menu" aria-label="Navigasi utama">
+            <button class="menu-toggle" type="button" aria-label="Buka menu" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="menu" id="primary-navigation" aria-label="Navigasi utama">
                 <a href="index.html">Beranda</a>
                 <a href="tentang_kami.html">Tentang Kami</a>
                 <a href="merk_aki.html">Merk Aki</a>
                 <a href="layanan.html">Layanan</a>
                 <a class="active" href="galeri.html" aria-current="page">Galeri</a>
-                <a href="layanan.html#kontak">Kontak</a>
+                <a href="kontak.html">Kontak</a>
             </nav>
         </div>
     </header>
@@ -252,5 +255,6 @@
             if (event.target === lightbox) lightbox.close();
         });
     </script>
+    <script src="js/nav.js" defer></script>
 </body>
 </html>
