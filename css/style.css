@@ -519,7 +519,7 @@ body {
     text-transform: uppercase;
 }
 
-.section-heading > p:last-child {
+.section-heading>p:last-child {
     max-width: 620px;
     margin: 12px auto 0;
     color: #64748b;
@@ -636,7 +636,7 @@ body {
     background: #f8fafc;
 }
 
-.process-card > span {
+.process-card>span {
     display: block;
     margin-bottom: 28px;
     color: #1d4ed8;
@@ -668,7 +668,7 @@ body {
     background: #ffffff;
 }
 
-.testimonial-card > p {
+.testimonial-card>p {
     color: #334155;
     line-height: 1.8;
 }

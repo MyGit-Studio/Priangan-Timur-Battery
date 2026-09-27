@@ -302,100 +302,11 @@ textarea {
     background: rgba(255, 255, 255, 0.04);
 }
 
-.site-footer {
-    background: #ffffff;
-    border-top: 1px solid rgba(148, 163, 184, 0.2);
-}
-
-.footer-inner {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-    gap: 36px;
-    padding: 56px 0 30px;
-}
-
-.footer-brand {
-    max-width: 360px;
-}
-
-.footer-logo {
-    display: inline-block;
-    margin-bottom: 16px;
-    color: #1d4ed8;
-    font-size: 1.1rem;
-    font-weight: 800;
-    text-decoration: none;
-}
-
-.footer-brand p {
-    color: #4b5563;
-    line-height: 1.8;
-}
-
-.footer-links h4,
-.footer-contact h4 {
-    margin-bottom: 16px;
-    color: #111827;
-    font-size: 1rem;
-}
-
-.footer-links ul,
-.footer-contact ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-links li,
-.footer-contact li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
-    color: #4b5563;
-    line-height: 1.8;
-}
-
-.contact-icon,
-.nav-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-    color: #1d4ed8;
-}
-
-.contact-icon svg,
-.nav-icon svg {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
-}
-
-.footer-links a {
-    color: #4b5563;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: #1d4ed8;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(148, 163, 184, 0.2);
-    padding: 16px 0;
-    text-align: center;
-    color: #6b7280;
-    font-size: 0.9rem;
-}
-
 @media (max-width: 900px) {
+
     .contact-grid,
     .map-wrap,
-    .area-box,
-    .footer-inner {
+    .area-box {
         grid-template-columns: 1fr;
     }
 
@@ -418,6 +329,19 @@ textarea {
     .form-card,
     .whatsapp-box {
         padding: 22px 18px;
+    }
+
+    .area-box {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .area-box ul {
+        justify-content: center;
+    }
+
+    .whatsapp-box {
+        text-align: center;
     }
 
     .info-item {

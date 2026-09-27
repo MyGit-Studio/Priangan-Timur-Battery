@@ -21,7 +21,8 @@
                 <a href="index.html"><span>PRIANGAN TIMUR <span class="brand-red">BATTERY</span></span></a>
             </div>
 
-            <button class="menu-toggle" type="button" aria-label="Buka menu" aria-controls="primary-navigation" aria-expanded="false">
+            <button class="menu-toggle" type="button" aria-label="Buka menu" aria-controls="primary-navigation"
+                aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
             <nav class="menu" id="primary-navigation" aria-label="Main navigation">
@@ -48,7 +49,8 @@
                 <div class="section-header">
                     <p class="section-kicker">Kategori Produk</p>
                     <h2>Pilih aki yang sesuai dengan kebutuhan Anda</h2>
-                    <div class="catalog-meta"><span><strong>17</strong> pilihan produk</span><span class="meta-divider"></span><span>Siap untuk berbagai kebutuhan</span></div>
+                    <div class="catalog-meta"><span><strong>17</strong> pilihan produk</span><span
+                            class="meta-divider"></span><span>Siap untuk berbagai kebutuhan</span></div>
                 </div>
 
                 <div class="filter-wrap">
@@ -225,9 +227,11 @@
                 <div>
                     <p class="catalog-kicker">Belum yakin memilih?</p>
                     <h2>Kami bantu mencocokkan aki dengan kebutuhan Anda.</h2>
-                    <p class="catalog-help-copy">Sampaikan jenis kendaraan atau perangkat Anda. Tim kami akan membantu mengecek pilihan yang paling sesuai.</p>
+                    <p class="catalog-help-copy">Sampaikan jenis kendaraan atau perangkat Anda. Tim kami akan membantu
+                        mengecek pilihan yang paling sesuai.</p>
                 </div>
-                <a class="btn btn-whatsapp" href="https://wa.me/6281234567890" target="_blank" rel="noopener">Tanya rekomendasi <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-whatsapp" href="https://wa.me/6281234567890" target="_blank" rel="noopener">Tanya
+                    rekomendasi <span aria-hidden="true">↗</span></a>
             </div>
         </section>
 
@@ -240,7 +244,8 @@
                 const category = card.querySelector('.brand-tag').textContent;
                 const info = document.createElement('div');
                 info.className = 'brand-info';
-                info.innerHTML = `<h3>${image.alt}</h3><p>${category} · Konsultasikan ketersediaan</p><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">Tanya produk <span aria-hidden="true">↗</span></a>`;
+                info.innerHTML =
+                    `<h3>${image.alt}</h3><p>${category} · Konsultasikan ketersediaan</p><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">Tanya produk <span aria-hidden="true">↗</span></a>`;
                 card.appendChild(info);
             });
 

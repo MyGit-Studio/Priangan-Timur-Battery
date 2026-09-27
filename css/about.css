@@ -197,14 +197,16 @@
 }
 
 .about-scope-inner {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     align-items: center;
+    text-align: center;
 }
 
 .about-scope-section h2 {
     color: #0b1220;
+    margin: 0 auto;
 }
 
 .about-cta-section h2 {
@@ -222,6 +224,7 @@
 .about-scope-tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -252,6 +255,7 @@
 }
 
 @media (max-width: 900px) {
+
     .story-grid,
     .about-scope-inner {
         grid-template-columns: 1fr;
@@ -269,14 +273,24 @@
 }
 
 @media (max-width: 560px) {
+
     .story-section,
     .about-scope-section {
         padding: 60px 0;
     }
 
-    .about-highlights,
     .about-values-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-highlights {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        text-align: center;
+    }
+
+    .about-highlights div {
+        padding: 14px 6px;
     }
 
     .about-cta-inner {
